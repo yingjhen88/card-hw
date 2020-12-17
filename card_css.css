@@ -1,0 +1,60 @@
+body{
+  margin:0;
+  background-color:#FFEE99;
+  background-image:url(背景.png);
+  background-position:right;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.cardtitle{
+  text-align:center;
+  font-family: DFKai-sb;
+  font-size:30px;
+  color:black;
+  padding-bottom:30px;
+  padding-top:30px;
+
+  opacity: .3;
+}
+.cardtitle:hover{
+  color:#0044BB;
+  opacity: 1.0;
+  text-shadow: 1px 1px black;
+}
+button{
+  color:#00ff00;
+}
+.header, .footer{
+  background-image:url(封面.png);
+  width:auto;
+  height:350px;
+  opacity: .6;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:cover;
+}
+.header img, .footer img{
+  width:150px;
+  height:auto;
+  position:relative;
+  top:80px;
+  left:45%;
+  padding-bottom:30px;
+}
+.classification{
+  padding-top:20px;
+  margin:0;
+}
+.img{
+  width:100%;transition: all 0.6s;
+}
+.img:hover{
+  transform: scale(1.4);
+}
+.btn:hover{
+  transform: scale(1.03);
+  filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.5))
+}
+.btn{
+  width:100%;transition: all 0.6s;
+}

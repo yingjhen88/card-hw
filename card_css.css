@@ -1,10 +1,9 @@
-body{
+.body{
   margin:0;
-  background-color:#FFEE99;
-  background-image:url(背景.png);
-  background-position:right;
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-image:url(body.png),url(背景.png);
+  background-position:center,right;
+  background-repeat:no-repeat,no-repeat;
+  background-size:cover,cover;
 }
 .cardtitle{
   text-align:center;

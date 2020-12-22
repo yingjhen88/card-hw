@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="card_js.js"></script>
     <link rel="stylesheet" type="text/css" href="card_css.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
   </head>
   <body>
     <div class="header">
@@ -12,38 +17,31 @@
     </div>
     <div class="body">
     <div class="classification">
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-3">
+      <div class="row justify-content-between">
+        <div class="col-3">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">
+                <button class="input-group-text" id="search-btn">
                   <img src="search.png" width="20px">
-                </span>
+                </button>
               </div>
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              <input placeholder="搜尋..." id="search-bar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
-          </div>
-          <div class="col-5">
-            <div class="dropdown">
-              卡片分類：
-              <button class="btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                百鬼夜刑
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">作惡多端惡鬼</a>
-                <a class="dropdown-item" href="#">行為向善善鬼</a>
-                <a class="dropdown-item" href="#">平衡人鬼陰陽師</a>
-              </div>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <div class="btn-group" role="group" aria-label="Basic example">
-                檢視：
-                <button type="button" class="btn-secondary">Left</button>
-                <button type="button" class="btn-secondary">Right</button>
-            </div>
-          </div>
-          </div>
         </div>
+        <div class="col-5">
+          <div id="filters"></div>
+          </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-3>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        檢視：
+        <button type="button" class="btn-secondary active" id="picture-btn">Left</button>
+        <button type="button" class="btn-secondary" id="list-btn">Right</button>
+        </div>
+      </div>
+      </div>
       </div>
       </div>
 
@@ -52,109 +50,56 @@
         百鬼夜刑
       </div>
     </div>
-    <div class="container">
+<div class="container" id="picture-content">
   <div class="row">
-    <div class="col-sm">
-<button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter1">
-  <img src="鬼怪\鬼.png" width=auto height="350px">
-</button>
-
-<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-left">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><img src="left.png" width="50px" height="50px"></span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-sm">
-            <img src="鬼怪\鬼.png" width=auto height="350px">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-left">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"><img src="left.png" width="50px" height="50px"></span>
+            </button>
           </div>
-          <div class="col-sm">
-            <h3>鬼怪牌</h3>
-          </div>
-        </div>
-      </div>
-      <div class="modal-right">
-        <button type="button" class="close" data-dismiss="modal"><img src="right.png" width="50px" height="50px"></button>
-    </div>
-  </div>
-</div>
-    </div>
-    <div class="col-sm">
-      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter2">
-        <img src="鬼怪\河童.png" width=auto height="350px">
-      </button>
-
-      <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-sm">
-                  <img src="鬼怪\河童.png" width=auto height="350px">
-                </div>
-                <div class="col-sm">
-                  <h3>河童</h3>
-                </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm">
+                <img class="card-img" src="鬼怪\鬼.png">
+              </div>
+              <div class="col-sm" id="card-title">
+                <h3>鬼怪牌</h3>
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
           </div>
+          <div class="modal-right">
+            <button type="button" class="close" data-dismiss="modal"><img src="right.png" width="50px" height="50px"></button>
         </div>
+      </div>
     </div>
-    </div>
-    <div class="col-sm">
-      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter3">
-        <img src="鬼怪\座敷童子.png" width=auto height="350px">
+    <!-- <div class="col-sm">
+      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+        <img src="鬼怪\鬼.png" width=auto height="350px">
       </button>
-
-      <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-sm">
-                  <img src="鬼怪\座敷童子.png" width=auto height="350px">
-                </div>
-                <div class="col-sm">
-                  <h3>河童</h3>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-    </div>
-    </div>
+    </div> -->
   </div>
 </div>
+<div class="container" style="display: none;" id="list-content">
+  <table class="table table-hover table-sm">
+    <thead>
+      <tr>
+        <th scope="col">鬼怪名稱</th>
+        <th scope="col">派別</th>
+        <th scope="col">團隊任務</th>
+        <th scope="col">重複</th>
+        <th scope="col">順序</th>
+        <th scope="col">團隊審判</th>
+        <th scope="col">個人任務屬性</th>
+      </tr>
+    </thead>
+      <tbody id="list-body"></tbody>
+  </table>
 </div>
+
+
 <div class="footer"></div>
-  <script type="text/javascript">
-    $('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
-  </script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
   </body>
 </html>

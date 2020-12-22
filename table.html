@@ -4,149 +4,31 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="card_js.js"></script>
+    <link rel="stylesheet" type="text/css" href="card_css.css">
   </head>
-  <body>
-    <table class="table table-hover table-sm">
-  <thead>
-    <tr>
-      <th scope="col">鬼怪名稱</th>
-      <th scope="col">派別</th>
-      <th scope="col">團隊任務</th>
-      <th scope="col">重複</th>
-      <th scope="col">順序</th>
-      <th scope="col">團隊審判</th>
-      <th scope="col">個人任務屬性</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">座敷童子</th>
-      <td><img src="blue.png" width="25px"></td>
-      <td><img src="boy.png" width="25px"><img src="boy.png" width="25px"><img src="girl.png" width="25px"><img src="baby.png" width="25px"><img src="old.png" width="25px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="No.png" width="20px"></td>
-      <td><img src="heaven.png" width="25px"></td>
-      <td>開朗、天真、樂觀</td>
-    </tr>
-    <tr>
-      <th scope="row">河童</th>
-      <td><img src="blue.png" width="25px"></td>
-      <td><img src="boy.png" width="25px"><img src="boy.png" width="25px"><img src="girl.png" width="25px"><img src="baby.png" width="25px"><img src="old.png" width="25px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="No.png" width="20px"></td>
-      <td><img src="heaven.png" width="25px"></td>
-      <td>殘忍、毒辣</td>
-    </tr>
-    <tr>
-      <th scope="row">唐傘小僧</th>
-      <td><img src="blue.png" width="25px"></td>
-      <td><img src="boy.png" width="25px"><img src="boy.png" width="25px"><img src="girl.png" width="25px"><img src="baby.png" width="25px"><img src="old.png" width="25px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="No.png" width="20px"></td>
-      <td><img src="heaven.png" width="25px"></td>
-      <td>找出座敷童子</td>
-    </tr>
-    <tr>
-      <th scope="row">貘</th>
-      <td><img src="blue.png" width="25px"></td>
-      <td><img src="boy.png" width="25px"><img src="boy.png" width="25px"><img src="girl.png" width="25px"><img src="baby.png" width="25px"><img src="old.png" width="25px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="No.png" width="20px"></td>
-      <td><img src="heaven.png" width="25px"></td>
-      <td>找出貓又</td>
-    </tr>
-    <tr>
-      <th scope="row">姑獲鳥</th>
-      <td><img src="blue.png" width="25px"></td>
-      <td><img src="boy.png" width="25px"><img src="boy.png" width="25px"><img src="girl.png" width="25px"><img src="baby.png" width="25px"><img src="old.png" width="25px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="No.png" width="20px"></td>
-      <td><img src="heaven.png" width="25px"></td>
-      <td>溫柔、平易近人、穩重</td>
-    </tr>
-    <tr>
-      <th scope="row">天狗</th>
-      <td><img src="blue.png" width="25px"></td>
-      <td><img src="boy.png" width="25px"><img src="boy.png" width="25px"><img src="girl.png" width="25px"><img src="baby.png" width="25px"><img src="old.png" width="25px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="No.png" width="20px"></td>
-      <td><img src="heaven.png" width="25px"></td>
-      <td>文質彬彬、正義正直</td>
-    </tr>
-    <tr>
-      <th scope="row">般若</th>
-      <td><img src="red.png" width="25px"></td>
-      <td><img src="boy.png" width="25px"><img src="girl.png" width="25px"><img src="baby.png" width="25px"><img src="old.png" width="25px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="hell.png" width="25px"></td>
-      <td>淫慾、狡猾多變、勢利</td>
-    </tr>
-    <tr>
-      <th scope="row">雪女</th>
-      <td><img src="red.png" width="25px"></td>
-      <td><img src="boy.png" width="25px"><img src="girl.png" width="25px"><img src="baby.png" width="25px"><img src="old.png" width="25px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="hell.png" width="25px"></td>
-      <td>聰明伶俐、坦率、熱情</td>
-    </tr>
-    <tr>
-      <th scope="row">鬼一口</th>
-      <td><img src="red.png" width="25px"></td>
-      <td><img src="boy.png" width="25px"><img src="girl.png" width="25px"><img src="baby.png" width="25px"><img src="old.png" width="25px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="hell.png" width="25px"></td>
-      <td>陰險奸詐、貪婪、橫行霸道</td>
-    </tr>
-    <tr>
-      <th scope="row">九尾狐</th>
-      <td><img src="red.png" width="25px"></td>
-      <td><img src="boy.png" width="25px"><img src="girl.png" width="25px"><img src="baby.png" width="25px"><img src="old.png" width="25px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="hell.png" width="25px"></td>
-      <td>找出安倍晴明</td>
-    </tr>
-    <tr>
-      <th scope="row">貓又</th>
-      <td><img src="red.png" width="25px"></td>
-      <td><img src="boy.png" width="25px"><img src="girl.png" width="25px"><img src="baby.png" width="25px"><img src="old.png" width="25px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="hell.png" width="25px"></td>
-      <td>傲慢、擇善固執</td>
-    </tr>
-    <tr>
-      <th scope="row">酒吞童子</th>
-      <td><img src="red.png" width="25px"></td>
-      <td><img src="boy.png" width="25px"><img src="girl.png" width="25px"><img src="baby.png" width="25px"><img src="old.png" width="25px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="Yes.png" width="20px"></td>
-      <td><img src="hell.png" width="25px"></td>
-      <td>忠厚、心地善良、暴力</td>
-    </tr>
-    <tr>
-      <th scope="row">安倍晴明</th>
-      <td><img src="purple.png" width="25px"></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>找出天狗、般若/在回合內紅藍方皆無勝利</td>
-    </tr>
-    <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<body>
 
-  </body>
+  <div id="filters">
+    <input placeholder="搜尋..." id="search-bar">
+    <button id="search-btn">搜尋</button>
+  </div>
+  <table class="table table-hover table-sm">
+    <thead>
+      <tr>
+        <th scope="col">鬼怪名稱</th>
+        <th scope="col">派別</th>
+        <th scope="col">團隊任務</th>
+        <th scope="col">重複</th>
+        <th scope="col">順序</th>
+        <th scope="col">團隊審判</th>
+        <th scope="col">個人任務屬性</th>
+      </tr>
+    </thead>
+      <tbody id="list-body"></tbody>
+
+  </table>
+
+
+</body>
 </html>

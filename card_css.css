@@ -5,7 +5,7 @@
   background-repeat:no-repeat,no-repeat;
   background-size:cover,cover;
 }
-.team-img {
+.team-img{
   width: 25px;
 }
 .trial-img {
@@ -89,4 +89,18 @@ button{
 .card-img{
   width: auto;
   height: 350px;
+}
+#exampleModalCenter .modal-content {
+  background-color: rgba(0,0,0,0);
+  border: none;
+}
+#team-img{
+  width:50px;
+}
+p{
+  color:#DDDDDD;
+}
+h3{
+  color:#2F4F4F;
+  font-weight: bold;
 }

@@ -243,8 +243,8 @@ let filters = {
   Ttask:null,
   repeat:null,
   order:null,
-  task:null,
   trial:null,
+  task:null,
   story:null,
 };
 let mode;
@@ -294,6 +294,7 @@ function search(){
   searched = dataFilter();
 
   /* 從篩選完的資料中，根據mode產生相應的elements */
+  let p = 0;
   for(let j of searched){
     if(mode === 'picture') {
       let colElement = document.createElement('div');
@@ -354,12 +355,23 @@ function search(){
             }
             if(key === 'name') {
               tdElement.classList.add("list-name");
-              tdElement.setAttribute('data-img', j.img);
+              let popElement = document.createElement('img');
+              popElement.classList.add("pop-container");
+              popElement.src = j.img;
+              tdElement.addEventListener('mouseover', function() {
+                this.querySelector('img').style.display = 'initial';
+              });
+              tdElement.addEventListener('mouseleave', function() {
+                this.querySelector('img').style.display = 'none';
+              });
+              tdElement.appendChild(popElement);
+              // tdElement.setAttribute('data-img', j.img);
             }
           }
           trElement.appendChild(tdElement);
         }
       }
+      p++;
       document.querySelector('#list-body').appendChild(trElement);
     }
 
